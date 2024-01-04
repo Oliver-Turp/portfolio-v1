@@ -6,7 +6,12 @@
     box-sizing: border-box;
     outline: none;
     color: inherit;
-  }
+}
+
+body {
+    min-height: 100cqb;
+    container: body / inline-size;
+}
 
 @font-face {
     font-family: 'mediaSansReg';
@@ -14,24 +19,28 @@
     font-weight: normal;
     font-style: normal
 }
+
 @font-face {
     font-family: 'mediaSansExtReg';
     src: url("../fonts/mediaSans/mediasansextended-regular.otf");
     font-weight: normal;
     font-style: normal
 }
+
 @font-face {
     font-family: 'mediaSansSCondReg';
     src: url("../fonts/mediaSans/mediasanssemicondensed-regular.otf");
     font-weight: normal;
     font-style: normal
 }
+
 @font-face {
     font-family: 'sfProDisReg';
     src: url("../fonts/sfPro/SF-Pro-Display-Regular.otf");
     font-weight: normal;
     font-style: normal
 }
+
 @font-face {
     font-family: 'sfProTxtReg';
     src: url("../fonts/sfPro/SF-Pro-Text-Regular.otf");
@@ -45,5 +54,5 @@
     --mediaSans-SCondReg: "mediaSansSCondReg";
     --sfPro-DisReg: "sfProDisReg";
     --sfPro-TxtReg: "sfProTxtReg";
-   
+
 }
