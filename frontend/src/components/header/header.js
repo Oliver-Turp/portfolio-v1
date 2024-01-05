@@ -18,6 +18,7 @@ const Header = () => {
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const burgerRef = useRef();
+  //console.log(`isPlaying`, isPlaying);
 
   const handleClick = () => {
     const currentFrame = Math.round(
@@ -40,10 +41,9 @@ const Header = () => {
   const handleEnterFrame = (e) => {
     setCurrentTime(e.currentTime);
     const currentTime = Math.round(e.currentTime);
-    console.log(`currentTime`, currentTime);
+    // console.log(`currentTime`, currentTime);
 
     if (isPlaying && currentTime === 53) {
-      setIsPlaying(false);
       burgerRef.current.pause();
     }
   };
@@ -57,25 +57,39 @@ const Header = () => {
         lottieRef={burgerRef}
         loop={false}
         autoplay={false}
+        initialSegment={[13, 77]}
         animationData={Hamburger}
-        style={{ width: 150, height: 150 }}
         onClick={handleClick}
         onEnterFrame={handleEnterFrame}
         className={styles.hamburger}
       />
-      <nav className={styles.navWrap}>
+      <nav
+        className={`${styles.navWrap} ${
+          isPlaying ? styles.burgerOpen : styles.burgerClosed
+        }`}
+      >
         <Link href={`/`} className={styles.navLink}>
-          Link
+          Websites
         </Link>
         <Link href={`/`} className={styles.navLink}>
-          Link
+          Discord Bots
         </Link>
         <Link href={`/`} className={styles.navLink}>
-          Link
+          About
         </Link>
         <Link className={styles.navBtn} href={`/`}>
-          Link
+          Contact
         </Link>
+        <section className={styles.mobContact}>
+          <h3>Oliver Turp</h3>
+          <section>
+            <p>email here</p>
+            <p>more text</p>
+          </section>
+          <Link className={styles.mobBtn} href={`/`}>
+            Let's Start A Project
+          </Link>
+        </section>
       </nav>
     </header>
   );
