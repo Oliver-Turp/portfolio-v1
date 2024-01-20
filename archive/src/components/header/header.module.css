@@ -1,0 +1,176 @@
+/* DESKTOP */
+@container body (width >=550px) {
+    .headerWrap {
+        container: headerWrap / inline-size;
+        display: grid;
+        grid-template-columns: 1fr 5fr 4fr;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0.5cqh 5cqw 0;
+        margin-bottom: 0.5cqh;
+        text-align: center;
+    }
+
+    .hamburger,
+    .mobContact {
+        display: none;
+    }
+
+    .logoWrap,
+    .navWrap {
+        height: 100%;
+        max-height: 10cqb;
+        display: flex;
+        align-items: center;
+    }
+
+    .logoWrap img {
+        width: max(100%, 100px);
+        height: auto;
+        cursor: pointer;
+    }
+
+    .navWrap {
+        grid-column-start: 3;
+        justify-content: space-between;
+    }
+
+    .navWrap a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5cqb 3cqi;
+        white-space: nowrap;
+    }
+
+    .navWrap a:not(.navBtn) {
+        transition: transform 0.3s ease;
+    }
+
+    .navBtn {
+        position: relative;
+        color: white;
+        background-color: black;
+        border-radius: 0.3rem;
+    }
+
+    .navBtn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: black;
+        border-radius: inherit;
+        transition: all 0.3s ease;
+    }
+
+    .navLink:hover {
+        transform: translateY(-4px);
+    }
+
+    .navBtn:hover::before {
+        transform: scale(1.15);
+        box-shadow: 0 32px 32px rgba(27, 27, 27, .1), 0 16px 16px rgba(27, 27, 27, .1), 0 8px 8px rgba(27, 27, 27, .1), 0 4px 4px rgba(27, 27, 27, .1), 0 2px 2px rgba(27, 27, 27, .1);
+    }
+}
+
+/* MOBILE */
+@container body (width < 550px) {
+    .navBtn {
+        display: none;
+    }
+
+    .headerWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2.5cqw 0;
+        margin-bottom: 0.5cqh;
+    }
+
+    .logoWrap,
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10cqb;
+        max-width: 33cqi;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+    }
+
+    .logoWrap img,
+    .hamburger svg {
+        width: auto;
+        height: 100%;
+    }
+
+    .hamburger svg {
+        scale: 2;
+        min-width: 250px;
+    }
+
+    .hamburger {
+        margin-right: -2.5cqw;
+    }
+
+    .navWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        inset: 0;
+        top: 10cqb;
+        width: 100%;
+        height: 90cqb;
+        transition: transform 0.8s ease;
+    }
+
+    .burgerClosed {
+        transform: translateY(100%);
+    }
+
+    .burgerOpen {
+        transform: translateY(0);
+        /* transition-delay: 1s; */
+    }
+
+    .navWrap a:not(.navBtn, .mobBtn) {
+        border-top: 1px solid darkorange;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        flex: 1;
+    }
+
+    .mobContact {
+        flex: 2.5;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0 20cqi;
+        border-top: 1px solid darkorange;
+    }
+
+    .mobContact>* {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .mobContact>section {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .mobBtn {
+        color: white;
+        background-color: black;
+        border-radius: 0.3rem;
+        height: 50%;
+        margin: auto 0;
+    }
+}
