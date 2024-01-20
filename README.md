@@ -2,7 +2,9 @@
 
 ## To Do list:
 
-- Shorten the hamburger annimation some how or use another one. There is too many frames which no movement which means the user thinks the website is slow and unresponsive.
+`npm i framer-motion`
+
+- Redo the navigation HTML so that there is a mobile and desktop version. This way one can have framer motion and the other can be free. Pay attention to CSS when messing with this.
 
 - Match up the timings for the mobile menu coming up with the animation time for the burger.
 

@@ -7,7 +7,6 @@ import LogoTreeJapan from "./images/PNGs/logo_treeJapan.png";
 import LogoTreeMan from "./images/PNGs/logo_treeMan.png";
 import LogoTreePower from "./images/PNGs/logo_treePower.png";
 import Hamburger from "./images/SVGs/Animation - Hamburger.json";
-import HamburgerTest from "./images/SVGs/Animation - Hamburger_Test.json";
 import Robot from "./images/SVGs/Animation - 404.json";
 
 export {
@@ -20,6 +19,5 @@ export {
   LogoTreeMan,
   LogoTreePower,
   Hamburger,
-  HamburgerTest,
   Robot,
 };

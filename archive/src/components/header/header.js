@@ -6,12 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   LogoLeaves as Logo,
-  LogoTreeCPU,
-  LogoTreeCyberPunk,
-  LogoTreeMan,
-  LogoTreePower,
   Hamburger,
-  Hamburger_Test,
 } from "@/assets/exports";
 import styles from "./header.module.css";
 
