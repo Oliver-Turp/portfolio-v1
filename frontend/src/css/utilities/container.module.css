@@ -1,0 +1,11 @@
+.container[data-width="narrow"] {
+    --max-width: 50cqi
+}
+
+.container[data-width="wide"] {
+    --max-width: 75cqi
+}
+
+.container[data-width="full"] {
+    --max-width: 100%
+}

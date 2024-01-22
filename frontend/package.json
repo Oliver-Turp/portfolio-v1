@@ -1,0 +1,26 @@
+{
+  "name": "next-js-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "maintenance": "node ./src/components/maintenance/MaintenanceToggle.js",
+    "imports": "node ./src/css/GenerateImports.js",
+    "dev": "node ./src/css/generateImports.js && next dev",
+    "test:chrome": "npx playwright test --headed --browser=chromium",
+    "test:firefox": "npx playwright test --headed --browser=firefox",
+    "test:safari": "npx playwright test --headed --browser=webkit",
+    "start": "node ./src/css/generateImports.js && next start",
+    "build": "next build"
+  },
+  "dependencies": {
+    "framer-motion": "^10.18.0",
+    "lottie-react": "^2.4.0",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.41.1"
+  }
+}

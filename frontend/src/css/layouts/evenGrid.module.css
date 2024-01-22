@@ -1,0 +1,6 @@
+.evenGrid {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}

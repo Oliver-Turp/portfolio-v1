@@ -1,0 +1,35 @@
+/* DESKTOP */
+@container body (width >=550px) {
+    .errorWrap {
+        display: flex;
+        place-items: center;
+        min-height: 80cqb;
+        margin: 0 10cqb;
+    }
+
+    .errorContainer {
+        min-height: 60cqb;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .errorContainer>* {
+        text-transform: capitalize;
+        letter-spacing: var(--xsmall-spacing);
+    }
+
+    .errorContainer p {
+        font-size: var(--font-size-small-700);
+    }
+
+    .errorContainer p>.memeFont {
+        text-transform: none;
+    }
+
+    .errorContainer p>.countDown {
+        color: var(--clr-brand-primary);
+    }
+}

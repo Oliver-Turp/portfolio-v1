@@ -1,0 +1,31 @@
+/* DESKTOP */
+@container body (width >=650px) {
+    .footerWrap {
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100cqi;
+        height: 10cqb;
+        padding: 1.5cqh 5cqw;
+    }
+
+    .footerWrap ul {
+        display: flex;
+        width: max(100%, 65cqi);
+        justify-content: space-around;
+    }
+
+    .footerWrap li {
+        width: 100%;
+    }
+
+    .footerWrap a {
+        color: white;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5cqb 3cqi;
+        white-space: nowrap;
+    }
+}

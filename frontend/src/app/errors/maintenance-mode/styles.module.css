@@ -1,0 +1,14 @@
+/* DESKTOP */
+@container body (width >=550px) {
+    .maintenanceWrap {
+        min-height: 80cqb;
+        display: flex;
+        flex-direction: column;
+        margin: 0 10cqb;
+    }
+
+    .maintenanceWrap h1 {
+        margin: 2cqb 0;
+        text-align: center;
+    }
+}

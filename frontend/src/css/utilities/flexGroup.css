@@ -1,0 +1,7 @@
+.flexGroup {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--flex-column-gap);
+    row-gap: var(--flex-row-gap);
+    width: fit-content;
+}

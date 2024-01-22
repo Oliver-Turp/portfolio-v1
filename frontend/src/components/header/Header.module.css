@@ -1,0 +1,181 @@
+/* DESKTOP */
+@container body (width >=650px) {
+    .mobileNav {
+        display: none;
+    }
+
+    .headerWrap {
+        container: headerWrap / inline-size;
+        display: flex;
+        height: 10cqb;
+        max-height: 10cqb;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5cqh 5cqw;
+        text-align: center;
+    }
+
+    .logoWrap,
+    .desktopNav {
+        height: 100%;
+        max-height: 10cqb;
+        display: flex;
+        align-items: center;
+    }
+
+    .logoWrap img {
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .desktopNav {
+        grid-column-start: 3;
+        justify-content: space-between;
+    }
+
+    .desktopNav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5cqb 3cqi;
+        white-space: nowrap;
+    }
+
+    .desktopNav a:not(.navBtn) {
+        transition: transform 0.3s ease;
+    }
+
+    .navBtn {
+        position: relative;
+        color: var(--clr-white);
+        background-color: var(--clr-brand-accent);
+        border-radius: 0.3rem;
+    }
+
+    .navBtn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: var(--clr-brand-accent);
+        border-radius: inherit;
+        transition: all 0.3s ease;
+    }
+
+    .navLink:hover {
+        transform: translateY(-4px);
+    }
+
+    .navBtn:hover::before {
+        transform: scale(1.15);
+        box-shadow: 0 32px 32px rgba(27, 27, 27, .1), 0 16px 16px rgba(27, 27, 27, .1), 0 8px 8px rgba(27, 27, 27, .1), 0 4px 4px rgba(27, 27, 27, .1), 0 2px 2px rgba(27, 27, 27, .1);
+    }
+}
+
+/* MOBILE */
+@container body (width < 650px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .headerWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2.5cqw 0;
+        margin-bottom: 0.5cqh;
+    }
+
+    .logoWrap,
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10cqb;
+        max-width: 33cqi;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        margin-right: -2.5cqw;
+        overflow: hidden;
+    }
+
+    .logoWrap img,
+    .hamburger svg {
+        width: auto;
+        height: 100%;
+    }
+
+    .hamburger svg {
+        scale: 2;
+        min-width: 250px;
+    }
+
+    .navWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        inset: 0;
+        top: 11cqb;
+        width: 100%;
+        height: 90cqb;
+        opacity: 0;
+        transform: translateY(100%);
+        z-index: 999;
+        background-color: var(--clr-brand-accent);
+        color: var(--clr-white);
+    }
+
+    .navWrap span {
+        flex: 1;
+    }
+
+    .navLine {
+        top: 0;
+        height: 1px;
+        width: 100%;
+        background-color: red;
+        transform: translateX(-100%);
+    }
+
+    .navWrap a:not(.navBtn, .mobBtn) {
+        transform: translateX(-100%);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .mobContact {
+        flex: 2.5;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0 20cqi;
+    }
+
+    .mobContact>* {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .mobContact>section {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .mobBtn {
+        color: white;
+        background-color: black;
+        border-radius: 0.3rem;
+        height: 50%;
+        margin: auto 0;
+    }
+}

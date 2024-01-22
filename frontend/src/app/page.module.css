@@ -1,0 +1,15 @@
+/* DESKTOP */
+@container body (width >=650px) {
+    .main {
+        min-height: 80cqb;
+        display: flex;
+        flex-direction: column;
+        margin: 0 10cqb;
+    }
+
+    .main h1 {
+        margin: 2cqb 0;
+        text-align: center;
+        color: var(--clr-brand-primary);
+    }
+}

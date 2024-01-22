@@ -1,0 +1,40 @@
+@import url('../css/exports.module');
+
+body {
+    font-family: var(--ff-base);
+    font-size: var(--font-size-small-400);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-header);
+}
+
+h1 {
+    font-size: var(--font-size-large-900);
+    font-weight: var(--font-weight-bold);
+}
+
+h2 {
+    font-size: var(--font-size-large-800);
+    font-weight: var(--font-weight-bold);
+}
+
+h3 {
+    font-size: var(--font-size-large-700);
+    font-weight: var(--font-weight-normal);
+}
+
+h4 {
+    font-size: var(--font-size-large-600);
+    font-weight: var(--font-weight-normal);
+}
+
+h5 {
+    font-size: var(--font-size-small-900);
+    font-weight: var(--font-weight-light);
+}
+
+h6 {
+    font-size: var(--font-size-small-800);
+    font-weight: var(--font-weight-light);
+}

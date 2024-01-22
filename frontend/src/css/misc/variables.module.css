@@ -1,0 +1,14 @@
+:root {
+    /* LAYOUT */
+    --p-max-width: 70ch;
+    --grid-gap: 5rem;
+    /* TYPOGRAPHY */
+    --base-font-size: 16px;
+    --ff-base: var(--ff-montserrat);
+    --ff-header: var(--ff-inter);
+    /* SPACING */
+    --base-spacing: 10px;
+    /* COLOURS */
+    --clr-brand-primary: var(--clr-red-mid);
+    --clr-brand-accent: var(--clr-blue-dark);
+}

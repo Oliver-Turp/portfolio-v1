@@ -1,0 +1,11 @@
+.textCenter {
+    text-align: center;
+}
+
+.textUppercase {
+    text-transform: uppercase;
+}
+
+.textCaptialise {
+    text-transform: capitalize;
+}

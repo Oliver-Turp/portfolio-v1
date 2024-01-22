@@ -1,0 +1,7 @@
+:root {
+    --xsmall-spacing: calc(var(--base-spacing) / 4);
+    --small-spacing: calc(var(--base-spacing) / 2);
+    --medium-spacing: var(--base-spacing);
+    --large-spacing: calc(var(--base-spacing) * 2);
+    --xlarge-spacing: calc(var(--base-spacing) * 3);
+}

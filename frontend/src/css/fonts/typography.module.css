@@ -1,0 +1,22 @@
+:root {
+    --ff-montserrat: "Montserrat", sans-serif;
+    --ff-inter: "Inter", sans-serif;
+
+    --font-size-small-900: 2.625rem;
+    --font-size-small-800: 2.25rem;
+    --font-size-small-700: 1.5rem;
+    --font-size-small-400: 1.125rem;
+    --font-size-small-300: 1rem;
+    --font-size-small-200: 0.875rem;
+
+    --font-size-large-900: 3.5rem;
+    --font-size-large-800: 3.125rem;
+    --font-size-large-700: 2.75rem;
+    --font-size-large-400: 1.625rem;
+    --font-size-large-300: 1.25rem;
+    --font-size-large-200: 0.875rem;
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-light: 300;
+}
