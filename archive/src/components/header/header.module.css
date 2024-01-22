@@ -1,5 +1,9 @@
 /* DESKTOP */
 @container body (width >=550px) {
+    .mobileNav {
+        display: none;
+    }
+
     .headerWrap {
         container: headerWrap / inline-size;
         display: grid;
@@ -11,13 +15,8 @@
         text-align: center;
     }
 
-    .hamburger,
-    .mobContact {
-        display: none;
-    }
-
     .logoWrap,
-    .navWrap {
+    .desktopNav {
         height: 100%;
         max-height: 10cqb;
         display: flex;
@@ -30,12 +29,12 @@
         cursor: pointer;
     }
 
-    .navWrap {
+    .desktopNav {
         grid-column-start: 3;
         justify-content: space-between;
     }
 
-    .navWrap a {
+    .desktopNav a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -43,7 +42,7 @@
         white-space: nowrap;
     }
 
-    .navWrap a:not(.navBtn) {
+    .desktopNav a:not(.navBtn) {
         transition: transform 0.3s ease;
     }
 
@@ -76,7 +75,7 @@
 
 /* MOBILE */
 @container body (width < 550px) {
-    .navBtn {
+    .desktopNav {
         display: none;
     }
 
@@ -99,6 +98,11 @@
         cursor: pointer;
     }
 
+    .hamburger {
+        margin-right: -2.5cqw;
+        overflow: hidden;
+    }
+
     .logoWrap img,
     .hamburger svg {
         width: auto;
@@ -110,10 +114,6 @@
         min-width: 250px;
     }
 
-    .hamburger {
-        margin-right: -2.5cqw;
-    }
-
     .navWrap {
         display: flex;
         flex-direction: column;
@@ -123,26 +123,22 @@
         top: 10cqb;
         width: 100%;
         height: 90cqb;
-        transition: transform 0.8s ease;
+        opacity: 0;
+        transform: translateY(-100%);
     }
 
-    .burgerClosed {
-        transform: translateY(100%);
-    }
-
-    .burgerOpen {
-        transform: translateY(0);
-        /* transition-delay: 1s; */
+    .navWrap span {
+        flex: 1;
     }
 
     .navWrap a:not(.navBtn, .mobBtn) {
-        border-top: 1px solid darkorange;
+        /* border-top: 1px solid darkorange; */
+        transform: translateX(-100%);
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         white-space: nowrap;
-        flex: 1;
     }
 
     .mobContact {
@@ -151,7 +147,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
         padding: 0 20cqi;
-        border-top: 1px solid darkorange;
+        /* border-top: 1px solid darkorange; */
     }
 
     .mobContact>* {
