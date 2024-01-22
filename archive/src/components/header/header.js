@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Lottie from "lottie-react";
-import { useAnimate, stagger } from "framer-motion";
+import { useAnimate, stagger, easeInOut } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { LogoLeaves as Logo, Hamburger } from "@/assets/exports";
@@ -18,22 +18,37 @@ function useMenuAnimation(isOpen) {
 
   useEffect(() => {
     const openSequence = [
-      // nav moves up
+      // FIRST: nav moves up
       [
         "nav",
-        { opacity: 1, y: 0 },
-        { duration: navDuration, ease: "easeInOut" },
+        {
+          y: "25%",
+        },
+        {
+          duration: navDuration / 4,
+          ease: "easeInOut",
+        },
       ],
-      // links move right
+      // SECOND1: nav fades in && moves up
       [
-        "span a",
-        { x: "-50%" },
-        { duration: navDuration / 2, ease: "easeInOut", at: linkDelay },
+        "nav",
+        {
+          y: 0,
+          opacity: 1,
+        },
+        { duration: navDuration / 2, ease: "easeInOut" },
       ],
-      // links fade in
+      // SECOND2: links move right
+      ["span a", { x: "-50%" }, { at: "<" }],
+      // THIRD: span staggers in
       [
-        "span a",
-        { x: 0, opacity: 1, scale: 1, filter: "blur(0px)" },
+        "span a, span hr",
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          filter: "blur(0px)",
+        },
         {
           duration: linkStagger,
           delay: staggerMenuOpen,
@@ -42,29 +57,34 @@ function useMenuAnimation(isOpen) {
       ],
     ];
 
-    const closeSequence = () => {
-      // links move left and fade
-      animate(
-        "span a",
+    const closeSequence = [
+      // FIRST: spans fade && move left
+      [
+        "span hr, span a",
         { x: "-100%", scale: 0.3, filter: "blur(20px)" },
         {
           duration: linkStagger * 2,
           ease: "easeInOut",
           delay: staggerMenuClose,
-        }
-      );
-      // nav retreats
-      animate(
+        },
+      ],
+      // SECOND: nav moves down
+      [
         "nav",
         { opacity: 0, y: "100%" },
-        { duration: navDuration / 2, ease: "easeInOut", delay: linkStagger }
-      );
-    };
+        {
+          duration: navDuration,
+          ease: "easeInOut",
+          at: +linkDelay,
+        },
+      ],
+    ];
 
     if (isOpen) {
+      // animate(openSequence);
       animate(openSequence);
     } else {
-      closeSequence();
+      animate(closeSequence);
     }
   }, [isOpen]);
 
@@ -144,23 +164,27 @@ const Header = () => {
           onClick={handleClick}
           onEnterFrame={handleEnterFrame}
           className={styles.hamburger}
-          priority
+          priority="true"
         />
         <nav className={styles.navWrap} animate={isOpen ? "open" : "closed"}>
           <span>
+            <hr className={styles.navLine} />
             <Link href={`/`} className={styles.navLink}>
               Websites
             </Link>
           </span>
           <span>
+            <hr className={styles.navLine} />
             <Link href={`/`} className={styles.navLink}>
               Discord Bots
             </Link>
+            <hr className={styles.navLine} />
           </span>
           <span>
             <Link href={`/`} className={styles.navLink}>
               About
             </Link>
+            <hr className={styles.navLine} />
           </span>
           <section className={styles.mobContact}>
             <h3>something here</h3>

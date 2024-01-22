@@ -24,8 +24,8 @@
     }
 
     .logoWrap img {
-        width: max(100%, 100px);
-        height: auto;
+        height: max(100%, 100px);
+        width: auto;
         cursor: pointer;
     }
 
@@ -124,15 +124,22 @@
         width: 100%;
         height: 90cqb;
         opacity: 0;
-        transform: translateY(-100%);
+        transform: translateY(100%);
     }
 
     .navWrap span {
         flex: 1;
     }
 
+    .navLine {
+        top: 0;
+        height: 1px;
+        width: 100%;
+        background-color: red;
+        transform: translateX(-100%);
+    }
+
     .navWrap a:not(.navBtn, .mobBtn) {
-        /* border-top: 1px solid darkorange; */
         transform: translateX(-100%);
         height: 100%;
         display: flex;
@@ -147,7 +154,6 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
         padding: 0 20cqi;
-        /* border-top: 1px solid darkorange; */
     }
 
     .mobContact>* {
