@@ -2,19 +2,21 @@
     --ff-montserrat: "Montserrat", sans-serif;
     --ff-inter: "Inter", sans-serif;
 
-    --font-size-small-900: 2.625rem;
-    --font-size-small-800: 2.25rem;
-    --font-size-small-700: 1.5rem;
-    --font-size-small-400: 1.125rem;
-    --font-size-small-300: 1rem;
-    --font-size-small-200: 0.875rem;
+    --font-size-small-900: clamp(2.625rem, 4vw, 3rem);
+    --font-size-small-800: clamp(2.25rem, 3.5vw, 2.75rem);
+    --font-size-small-700: clamp(1.5rem, 2.5vw, 2rem);
+    --font-size-small-400: clamp(1.125rem, 2vw, 1.5rem);
+    --font-size-small-300: clamp(1rem, 1.5vw, 1.25rem);
+    --font-size-small-200: clamp(0.875rem, 1vw, 1rem);
 
-    --font-size-large-900: 3.5rem;
-    --font-size-large-800: 3.125rem;
-    --font-size-large-700: 2.75rem;
-    --font-size-large-400: 1.625rem;
-    --font-size-large-300: 1.25rem;
-    --font-size-large-200: 0.875rem;
+    --font-size-large-900: clamp(3.5rem, 5vw, 4rem);
+    --font-size-large-800: clamp(3.125rem, 4.5vw, 3.75rem);
+    --font-size-large-700: clamp(2.75rem, 4vw, 3.5rem);
+    --font-size-large-400: clamp(1.625rem, 3vw, 2.25rem);
+    --font-size-large-300: clamp(1.25rem, 2.5vw, 1.75rem);
+    --font-size-large-200: clamp(0.875rem, 2vw, 1.5rem);
+
+    --font-size-xl-900: 12vw;
 
     --font-weight-normal: 400;
     --font-weight-bold: 700;

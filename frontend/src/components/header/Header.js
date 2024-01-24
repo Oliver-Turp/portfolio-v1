@@ -68,7 +68,7 @@ const Header = () => {
         <Link href={`/`} className={styles.navLink}>
           About
         </Link>
-        <Link className={styles.navBtn} href={`/`}>
+        <Link className={`accentBtnHover ${styles.navBtn}`} href={`/`}>
           Contact
         </Link>
       </nav>

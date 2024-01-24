@@ -2,10 +2,18 @@
 
 ## To Do list:
 
-- [x] `npm i framer-motion`
+- [ ] Add in focus, click aniamtions to links for mobile
 
-- [x] Redo the navigation HTML so that there is a mobile and desktop version. This way one can have framer motion and the other can be free. Pay attention to CSS when messing with this.
+- [ ] Considering moving all @container queries back to @media queries, or maybe use both as a fall back?
 
-- [ ] ~~Match up the timings for the mobile menu coming up with the animation time for the burger.~~
+- [ ] Add active page styles for links
 
-- [x] Add in some fancy movements on the mobile menu. Perhaps the borders come in from the side one by one? May have to use :after elements.
+- [ ] Add in loading transitions
+
+- [ ] Update header links
+
+- [ ] Design footer
+
+- [ ] Change the home image
+
+- [ ] Tweak the mouseover animation. It's not buttery smooth like [this one](https://en.bazil.fr/)

@@ -1,0 +1,69 @@
+.hoverWrap h1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-xl-900);
+    position: relative;
+}
+
+.textWrap {
+    position: relative;
+}
+
+.textWrap>* {
+    transition: all .35s ease;
+}
+
+.textWrap p {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--clr-black);
+}
+
+.textWrap a {
+    z-index: 3;
+    color: transparent;
+    position: relative;
+}
+
+.hoverImage {
+    position: absolute;
+    height: max-content;
+    width: auto;
+    bottom: 0cqi;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin: auto;
+    background-clip: content-box;
+}
+
+/* Hover effect */
+.textWrap a[data-hovered="true"] {
+    -webkit-text-stroke: 2px var(--clr-white);
+
+}
+
+.textWrap a[data-hovered="true"]~p {
+    color: var(--clr-brand-primary);
+    -webkit-text-stroke: 2px var(--clr-white);
+}
+
+/* DESKTOP */
+@container body (width >=650px) {
+    .hoverImage {
+        z-index: 2;
+        will-change: transform;
+        transform-origin: center;
+        transition: transform 1s ease;
+    }
+}
+
+/* MOBILE */
+@container body (width <650px) {
+    .hoverImage {
+        /* z-index: 4; */
+    }
+}

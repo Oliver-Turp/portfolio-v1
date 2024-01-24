@@ -1,15 +1,86 @@
+.main {
+    max-width: 75cqi;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main .buttonWrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 3;
+}
+
+.main .buttonWrap a {
+    padding: 1em 0;
+    white-space: nowrap;
+    max-width: max(17vw, 275px);
+    text-align: center;
+    flex: 1;
+}
+
 /* DESKTOP */
 @container body (width >=650px) {
     .main {
-        min-height: 80cqb;
-        display: flex;
-        flex-direction: column;
-        margin: 0 10cqb;
+        height: 90cqb;
+        justify-content: space-evenly;
     }
 
-    .main h1 {
-        margin: 2cqb 0;
+    .contentWrap {
+        margin: 0 auto;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: max-content;
+    }
+
+    .contentWrap>p:last-of-type {
+        justify-self: end;
+        margin-top: 1cqb;
+    }
+
+    .main .buttonWrap {
+        margin-top: 7.5cqb;
+        margin-bottom: 3.5cqb;
+        justify-content: center;
+        --btn-scale: 1.1;
+    }
+
+    .main .buttonWrap a {
+        padding: 1em 0;
+        white-space: nowrap;
+        max-width: max(17vw, 275px);
         text-align: center;
-        color: var(--clr-brand-primary);
+        flex: 1;
+    }
+
+}
+
+/* MOBILE */
+@container body (width <650px) {
+    .main {
+        height: 89.5cqb;
+    }
+
+    .contentWrap {
+        margin: 2.5cqb auto 0;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: max-content;
+        text-align: center;
+    }
+
+    .contentWrap>p:last-of-type {
+        margin-top: 1cqb;
+    }
+
+    .main .buttonWrap {
+        justify-content: space-between;
+        position: absolute;
+        bottom: 25%;
+        left: 0;
+        right: 0;
+        --btn-scale: 1.05;
     }
 }

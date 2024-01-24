@@ -1,26 +1,28 @@
+import Link from "next/link";
+import HomeHoverButtons from "@/components/buttons/HomeHoverButtons";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Template Home Page",
-  description: "This is the home page of my nextjs template.",
+  title: "Oliver Turp | Home",
+  description: "Edit this later.",
 };
-
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Content Here</h1>
-      <div className={`evenGrid`}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, porro?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, porro?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, porro?
-        </p>
+      <div className={styles.contentWrap}>
+        <p className="">👋, my name is Oliver and I am a freelance</p>
+        <HomeHoverButtons />
+        <p className="">based in Hertfordshire, England.</p>
       </div>
+      <section className={styles.buttonWrap}>
+        <Link href={`/`} className={`accentBtnHover`}>
+          I need a Website
+        </Link>
+        <Link href={`/`} className={`accentBtnHover`}>
+          I need a Discord Bot
+        </Link>
+      </section>
     </main>
   );
 }
