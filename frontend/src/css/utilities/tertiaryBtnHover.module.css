@@ -1,0 +1,12 @@
+.tertiaryBtnHover {
+    position: relative;
+    border-radius: 0.3rem;
+    border: 2px solid var(--clr-black);
+    padding: 0.5em 1em;
+    transition: all 300ms;
+}
+
+.tertiaryBtnHover:hover {
+    padding: 1em 1.5em;
+    box-shadow: 0 32px 32px rgba(27, 27, 27, .1), 0 16px 16px rgba(27, 27, 27, .1), 0 8px 8px rgba(27, 27, 27, .1), 0 4px 4px rgba(27, 27, 27, .1), 0 2px 2px rgba(27, 27, 27, .1);
+}

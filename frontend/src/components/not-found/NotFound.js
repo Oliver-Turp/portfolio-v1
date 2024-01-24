@@ -1,10 +1,14 @@
 "use client";
 import { useEffect } from "react";
-import useRedirect from "@/hooks/UseRedirect.js";
+import useRedirect from "@/hooks/UseRedirect";
 import styles from "./notFound.module.css";
 
 export default function NotFound() {
   const { secondsRemaining } = useRedirect("/", 5);
+  let suffix = "seconds";
+  if (secondsRemaining < 2) {
+    suffix = "second";
+  }
 
   useEffect(() => {
     console.log("on 404 page");
@@ -21,7 +25,7 @@ export default function NotFound() {
         </p>
         <p>
           Sending you back in{" "}
-          <span className={styles.countDown}>{secondsRemaining}</span> seconds
+          <span className={styles.countDown}>{secondsRemaining}</span> {suffix}
         </p>
       </div>
     </div>

@@ -21,6 +21,7 @@
         max-height: 10cqb;
         display: flex;
         align-items: center;
+        white-space: nowrap;
     }
 
     .logoWrap img {

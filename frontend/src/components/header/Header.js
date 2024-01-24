@@ -4,8 +4,9 @@ import { useRef, useState } from "react";
 import Lottie from "lottie-react";
 import Image from "next/image";
 import Link from "next/link";
-import useMenuAnimation from "@/hooks/UseMenuAnimation";
+import useMenuAnimation from "@/hooks/useMenuAnimation";
 import { Logo, Hamburger } from "@/assets/exports";
+import { Home, Websites } from "@/routes/allRoutes";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -55,11 +56,11 @@ const Header = () => {
 
   return (
     <header className={styles.headerWrap}>
-      <div className={styles.logoWrap}>
+      <Link href={Home} className={styles.logoWrap}>
         <Image src={Logo} alt="logo" />
-      </div>
+      </Link>
       <nav className={styles.desktopNav}>
-        <Link href={`/`} className={styles.navLink}>
+        <Link href={Websites} className={styles.navLink}>
           Websites
         </Link>
         <Link href={`/`} className={styles.navLink}>
@@ -68,7 +69,7 @@ const Header = () => {
         <Link href={`/`} className={styles.navLink}>
           About
         </Link>
-        <Link className={`accentBtnHover ${styles.navBtn}`} href={`/`}>
+        <Link href={`/`} className={`accentBtnHover ${styles.navBtn}`}>
           Contact
         </Link>
       </nav>
@@ -86,7 +87,7 @@ const Header = () => {
         <nav className={styles.navWrap} animate={isOpen ? "open" : "closed"}>
           <span>
             <hr className={styles.navLine} />
-            <Link href={`/`} className={styles.navLink}>
+            <Link href={Websites} className={styles.navLink}>
               Websites
             </Link>
           </span>
@@ -103,7 +104,7 @@ const Header = () => {
             </Link>
             <hr className={styles.navLine} />
           </span>
-          <section className={styles.mobContact}>
+          <div className={styles.mobContact}>
             <h3>something here</h3>
             <section>
               <p>email here</p>
@@ -112,7 +113,7 @@ const Header = () => {
             <Link className={styles.mobBtn} href={`/`}>
               Let's Start A Project
             </Link>
-          </section>
+          </div>
         </nav>
       </div>
     </header>

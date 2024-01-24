@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HomeHoverButtons from "@/components/buttons/HomeHoverButtons";
+import { Websites } from "@/routes/allRoutes";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -15,14 +16,14 @@ export default function Home() {
         <HomeHoverButtons />
         <p className="">based in Hertfordshire, England.</p>
       </div>
-      <section className={styles.buttonWrap}>
-        <Link href={`/`} className={`accentBtnHover`}>
+      <div className={styles.buttonWrap}>
+        <Link href={Websites} className={`accentBtnHover`}>
           I need a Website
         </Link>
         <Link href={`/`} className={`accentBtnHover`}>
           I need a Discord Bot
         </Link>
-      </section>
+      </div>
     </main>
   );
 }

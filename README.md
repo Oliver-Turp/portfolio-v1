@@ -12,14 +12,24 @@
 
 - [ ] Add in loading transitions
 
-### Homepage: 
+- [ ] Pick heading & body fonts
 
-- [ ] Change the home image
-
-- [ ] Tweak the mouseover animation. It's not buttery smooth like [this one](https://en.bazil.fr/)
+- [ ] Adjust all fonts page by page
 
 ### Components:
 
 - [ ] Update header links
 
 - [ ] Design footer
+
+### Homepage: 
+
+- [ ] Change the home image
+
+- [ ] Tweak the mouseover animation. It's not buttery smooth like [this one](https://en.bazil.fr/)
+
+### Websites:
+
+- [ ] Update unsplash images with examples of work done (TBC)
+
+- [ ] Change 

@@ -30,6 +30,6 @@ const Maintenance = () => {
 export default Maintenance;
 
 export const metadata = {
-  title: "Template | Maintenance",
-  description: "This is the home page of my nextjs template.",
+  title: "Oliver Turp | Maintenance",
+  description: "Oops! This site is currently down for schedule maintenance.",
 };

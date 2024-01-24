@@ -3,8 +3,9 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Avatar } from "@/assets/exports";
-import useMouseMove from "@/hooks/UseMouseMove";
-import styles from "./homeHoverButtons.module.css";
+import useMouseMove from "@/hooks/useMouseMove";
+import { Websites } from "@/routes/allRoutes";
+import styles from "./HomeHoverButtons.module.css";
 
 export default function HomeHoverButtons() {
   const [hovered, setHovered] = useState(false);
@@ -14,7 +15,11 @@ export default function HomeHoverButtons() {
     <div className={styles.hoverWrap}>
       <h1>
         <section className={styles.textWrap}>
-          <Link href={`/`} data-hovered={!hovered} data-text="Web Designer">
+          <Link
+            href={Websites}
+            data-hovered={!hovered}
+            data-text="Web Designer"
+          >
             Web Designer
           </Link>
           <p>Web Designer</p>

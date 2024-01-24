@@ -1,0 +1,25 @@
+/* GENERAL */
+.cardsWrap {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: -8.5cqi;
+    right: -8.5cqi;
+    bottom: -20%;
+    top: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+.cardsWrap img {
+    margin: 0 0.5cqi;
+    min-width: 200px;
+    min-height: 400px;
+}
+
+/* DESKTOP */
+@container body (width >=650px) {}
+
+/* MOBILE */
+
+@container body (width < 650px) {}

@@ -1,0 +1,28 @@
+/* GENERAL */
+.webWrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 92.5cqi;
+    margin: auto;
+    margin-top: 3cqb;
+    height: max-content;
+    height: 200vh;
+    /* ^^ TEMP FOR PARALLAX ^^ */
+}
+
+.heroWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5cqb;
+    min-height: 70cqb;
+    padding: 10.5cqb 0 3.5cqb;
+    position: relative;
+}
+
+/* DESKTOP */
+@container body (width >=650px) {}
+
+/* MOBILE */
+
+@container body (width < 650px) {}
